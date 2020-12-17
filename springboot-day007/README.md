@@ -14,8 +14,8 @@ ApplicationContext의 타입을 커스터마이징 할 수 있다.
 public static void main(String[] args) {
     SpringApplication app = new SpringApplication(Application.class);
     app.setWebApplicationType(WebApplicationType.NONE);
-	app.setWebApplicationType(WebApplicationType.REACTIVE);
-	app.setWebApplicationType(WebApplicationType.SERVLET);
+    app.setWebApplicationType(WebApplicationType.REACTIVE);
+    app.setWebApplicationType(WebApplicationType.SERVLET);
 }
 ```
 
@@ -82,8 +82,7 @@ app.run("--hello=Hello","--hello=World");
 ```
 
 
-
-![image-20201202161105898](C:\Users\psa06\AppData\Roaming\Typora\typora-user-images\image-20201202161105898.png)
+<img width="189" alt="1" src="https://user-images.githubusercontent.com/58761162/100889802-e9911580-34fa-11eb-80f9-550462258c77.PNG">
 
 또 다른 방법 :  `@Value`를 사용하여 주입하기
 
@@ -180,8 +179,7 @@ public class ApplicationRunnerSecond implements ApplicationRunner {
 }
 
 ```
-
-![image-20201202164857418](C:\Users\psa06\AppData\Roaming\Typora\typora-user-images\image-20201202164857418.png)
+<img width="227" alt="2" src="https://user-images.githubusercontent.com/58761162/100889812-ebf36f80-34fa-11eb-8dab-3c4f188b4757.PNG">
 
 순서대로 리스너 - 러너1 - 러너2가 호출됐다.
 
@@ -214,7 +212,7 @@ public class ExitCodeApplication {
 
 [에러가 났을때 ExitCode 사용하는 방법](https://www.logicbig.com/tutorials/spring-framework/spring-boot/app-exit-code.html)
 
-이 방법은 에러를 던지고, 에러 클래스에서 ExitCodeGenerator 인터페이스를 구현하고,
+위 링크에 있는 방법은 에러를 던지고, 에러 클래스에서 ExitCodeGenerator 인터페이스를 구현하고,
 
 Exit 이벤트 리스너를 만들어서 그 이벤트에서 exit코드를 꺼내 출력하는 방법이다.
 
@@ -226,4 +224,6 @@ Exit 이벤트 리스너를 만들어서 그 이벤트에서 exit코드를 꺼�
 
 property에 `spring.application.admin.enabled=true` 를 추가하고 어플리케이션을 실행한다.
 
-cmd를 통해 `jconsole`로 접속하여 애플리케이션 메모리,쓰레드도 보고 MBeansServer에 등록되어있는 SpringApplication을 찾아서 shutdown 을 시킬 수가 있다.
+cmd를 통해 `jconsole`로 접속하여 애플리케이션 메모리,쓰레드도 보고
+
+MBeansServer에 등록되어있는 SpringApplication을 찾아서 shutdown 을 시킬 수가 있다.
