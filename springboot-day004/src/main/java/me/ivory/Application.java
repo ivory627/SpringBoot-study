@@ -37,7 +37,9 @@ public class Application {
 		//app.setWebApplicationType(WebApplicationType.REACTIVE);
 		//app.setWebApplicationType(WebApplicationType.SERVLET);
 		
-		app.run("--hello=Hello","--hello=World");
+		//커맨드라인 arguments
+//		app.run("--hello=Hello","--hello=World");
+		app.run();
 		
 		//2. 한줄로 끝내는 방법
 		//SpringApplication.run(Application.class, args);
